@@ -1,0 +1,92 @@
+.login{
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    height: 668px;
+}
+.login-bg{
+    background: url(../images/login-bg.png) no-repeat;
+    min-height: 568px;
+    position: absolute;
+    left:50%;
+    margin-left: -960px;
+    width: 1920px;
+}
+.login-btm{
+    width: 494px;
+    float: right;
+    margin-right: 40px;
+    margin-top: 50px;
+    padding-bottom: 42px;
+    padding-left: 30px;
+    background: url(../images/login-btm.png) left bottom no-repeat;
+}
+.login-con{
+    width: 381px;
+    background: #fff;
+    padding: 50px 40px 35px;
+}
+.login-con h2{
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+    color:#ff8813;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.login-con .btn{
+    margin-top: 68px;
+    display: block;
+    height: 73px;
+    line-height: 73px;
+    border-radius: 0;
+    font-size: 24px;
+}
+.form .label:first-child{
+    margin-top: 50px;
+}
+.label{
+    margin-top: 36px;
+    border: 1px solid #d6d6d6;
+}
+.lable-icon{
+    width: 50px;
+    float: left;
+    height: 54px;
+}
+.label input{
+    font-size: 18px;
+    height:34px;
+    background: transparent;
+    line-height: inherit;
+    width: 100%;
+}
+.ipt-box{
+    float: left;
+    padding: 10px 0;
+    line-height: 34px;
+}
+.ipt-code{
+    width: 180px;
+}
+.code{
+    float: right;
+    width: 120px;
+    text-align: center;
+    line-height: 34px;
+    height: 34px;
+    padding: 10px 0;
+    background: #feae2f;
+    color:#fff;
+}
+.code-dis{
+    background: #b5b5b5;
+}
+.label-user,.label-code{
+    display: block;
+    height: 36px;
+    margin-top: 8px;
+}
+.label-code{
+    background-position: 0 -36px;
+}

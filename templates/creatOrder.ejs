@@ -1,0 +1,36 @@
+<@- include('include/_header.ejs', {data:{title:"创建订单"}}); @>
+<body>
+<div id="header">
+    <div class="w clear">
+        <div class="login-info">
+            <span class="user">13579458021</span>
+            <a href="javascript:;" class="quit" id="logout"></a>
+        </div>
+        <div class="logo-sm">
+            <a href=""></a>
+        </div>
+    </div>
+</div>
+<div class="main clear creat">
+    <div class="side">
+        <ul class="side-menu">
+            <li class="curr"><a href=""><span class="icon i-list"></span>订单列表</a></li>
+        </ul>
+    </div>
+    <div class="side-right">
+        <div class="crumb"><div class="icon-crumb">您当前所在的位置：<a href="">订单列表</a> &gt; <span>创建新订单</span></div></div>
+        <div class="title"><div class="clock fr">创建时间：2016.07.12 12:09:21</div><h2>订单号：ID45313411</h2></div>
+        <div class="tab">
+            <ul class="tab-list clear" id="selectInfo">
+                <li data-type="custInfo" class="curr">主借款人信息</li>
+                <li data-type="partnerInfo">共同借款人信息</li>
+                <li data-type="guarantorInfo">担保人信息</li>
+                <li data-type="houseInfo">房产信息</li>
+                <li data-type="loanInfo">贷款信息</li>
+            </ul>
+            <div class="tab-con" id="content"></div>
+        </div>
+    </div>
+</div>
+</body>
+<@- include('include/_footer.ejs',{data:{main:"js/creatOrder"}}); @>

@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "custName": "王宝宝",
+      "flag": null,
+      "msg": null,
+      "sCreatedTime": "2015-08-28 08:02:02",
+      "sOrderId": "19920724",
+      "sOrderStatus": 1,
+      "sRelatingCode": "DL001"
+    },
+    {
+      "custName": null,
+      "flag": null,
+      "msg": null,
+      "sCreatedTime": "2015-08-28 08:02:02",
+      "sOrderId": "19920725",
+      "sOrderStatus": 2,
+      "sRelatingCode": "DL002"
+    }
+  ],
+  "flag": 1,
+  "msg": "操作成功"
+}

@@ -1,0 +1,90 @@
+<@- include('include/_header.ejs', {data:{title:"订单列表"}}); @>
+<body>
+
+<div id="header">
+    <div class="w clear">
+        <div class="login-info">
+            <span class="user">110</span>
+            <a href="javascript:void(0)" class="quit"></a>
+        </div>
+        <div class="logo-sm">
+            <a href="javascript:void(0)"></a>
+        </div>
+    </div>
+</div>
+<div class="clear side-lg main">
+    <div class="side">
+        <ul class="side-menu">
+            <li class="curr"><a href="javascript:void(0)"><span class="icon i-list-sm"></span>订单列表</a></li>
+        </ul>
+    </div>
+    <div class="side-right">
+        <div class="crumb"><div class="icon-crumb">您当前所在的位置：<span>订单列表</span></div></div>
+        <div class="order-list">
+            <div class="title"><a href="javascript:void(0)" class="fr btn-creat">创建新订单</a><h2>订单列表页</h2></div>
+            <div class="seach-box">
+               <div class="select-group">
+                   <div class="select w-all">
+                       <div class="selectedCont" id="salesOrderStatus"><span data-code=''>全部</span><a href="javascript:void(0)" class="areat2 icon"></a></div>
+                       <div class="select-option">
+                           <ul>
+                               <li data-code=''>全部</li>
+                               <li data-code='1'>未完成</li>
+                               <li data-code='2'>已完成</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="select w-date">
+                       	<div class="gray">
+                       		<span class="icon i-time"></span><input type="text" class="w-short choiceDate" id="dateSelect" placeholder="2016-07-13"/> － <input type="text" class="w-short choiceDate" id="endDate" placeholder="2016-08-13"/>
+                       	</div><a href="javascript:void(0)" class="areat2 icon"></a>
+                   </div>
+                   <input type="text" class="ipt w-short" id="salesOrderId" placeholder="订单号码"/>
+                   <input type="text" class="ipt w-short" id="custName" placeholder="主借款人姓名"/>
+                   <a href="javascript:void(0)" class="btn-seach" id="toSearch">搜索</a>
+               </div>
+           </div>           
+            <div class="table">
+                <table class="" width="100%"></table>
+            </div>          
+            <div class="page">
+                <div class="page-list"></div>               
+                <div class="each-page">每页显示<div class="select">
+                    <div class="selectedCont" id="showNumber"><span>10</span><a href="javascript:void(0)" class="areat2 icon"></a></div>
+                    <div class="select-option">
+                        <ul>
+                            <li class="changeNumber" data-code='5'>5</li>
+                            <li class="changeNumber" data-code='10'>10</li>
+                        </ul>
+                    </div>
+                </div>条</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/template" id="template">
+    <tr>
+        <th>订单编号</th>
+        <th>主借款人姓名</th>
+        <th>关联码</th>
+        <th>状态</th>
+        <th>操作</th>
+    </tr>
+    <%_.each(data,function(item,index){%>
+    <tr>
+        <td><%=item.salesOrderId%></td>
+        <td><%=item.custName%></td>
+        <td><%=item.salesRelatingCode%></td>
+        <td class="<%=item.salesOrderStatus=='1'?'c-nComplet':''%>"><%=item.salesOrderStatus=='1'?'未完成':'已完成'%></td>
+        <td><a href="javascript:;" class="icon opt-detail " title="查看" data-value="1"></a><a href="javascript:void(0)" class="icon <%=item.salesOrderStatus=='1'?'opt-edit':'dn'%>"  title="修改" data-value="0"></a></td>
+    </tr>
+    <%})%>
+</script>
+<script type="text/template" id="empty">
+	<tr>
+        <th>您还没有订单!</th>        
+    </tr>
+</script>
+</body>
+<@- include('include/_footer.ejs',{data:{main:"js/selectOrder"}}); @>

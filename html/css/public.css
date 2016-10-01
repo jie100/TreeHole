@@ -1,0 +1,173 @@
+#header{
+    background: #feae2f;
+}
+.logo-sm,.logo{
+    padding: 15px 16px 18px;
+}
+.logo-sm a{
+    display: block;
+    width: 162px;
+    height: 22px;
+    background: url(../images/logo-sm.png) no-repeat;
+}
+.logo a{
+    display: block;
+    width: 303px;
+    height: 39px;
+    background: url(../images/logo.png) no-repeat;
+}
+.login-info{
+    float: right;
+    color:#fff;
+}
+#footer{
+    text-align: center;
+    color:#969696;
+    padding: 45px;
+}
+.w,.main{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.btn{
+    display: inline-block;
+    height: 67px;
+    line-height: 67px;
+    font-size: 18px;
+    color:#fff;
+    text-align: center;
+    background: #feae2f;
+    border-radius: 4px;
+    min-width: 190px;
+}
+.btn-seach{
+    display: inline-block;
+    vertical-align: top;
+    width: 78px;
+    text-align: center;
+    color:#fff;
+    height: 38px;
+    line-height: 38px;
+    background: #feae2f;
+    font-size: 14px;
+}
+.btn-creat{
+    display: inline-block;
+    vertical-align: top;
+    width: 114px;
+    text-align: center;
+    color:#fff;
+    height: 35px;
+    line-height: 35px;
+    background: #2fbaa5;
+    font-size: 14px;
+}
+.btn-other{
+    background: #26b9a3;
+}
+.btn-box{
+    text-align: center;
+    font-size: 0;
+}
+.btn-box .btn{
+    margin-left: 60px;
+}
+.btn-box .btn:first-child{
+    margin-left: 0;
+}
+.ipt{
+    font-size: 12px;
+    padding: 6px 18px;
+    border:1px solid #ebebeb;
+    height: 24px;
+
+}
+
+.lable-icon,.icon-crumb,.radio li,.icon,.spread,.quit,.user,.clock{
+    background: url(../images/spr.png) no-repeat;
+    display: inline-block;
+}
+.user{
+    background-position: 0 -248px;
+    padding-left: 40px;
+    line-height: 30px;
+    margin-top: 13px;
+}
+.quit{
+    background-position: 5px -278px;
+    background-color: #f09a10;
+    margin-left: 30px;
+    width: 65px;
+    height: 55px;
+    vertical-align: top;
+}
+.close{
+    margin: 0 auto;
+    width: 31px;
+    height: 31px;
+    background-position: 0 -368px;
+    position: absolute;
+    top:-48px;
+    right:10px;
+}
+.i-cuss{
+    margin: 0 auto;
+    width: 50px;
+    height: 40px;
+    background-position: 0 -399px;
+}
+.clock{
+    background-position: 0 -439px;
+}
+.opt-detail{
+    width: 22px;
+    height: 22px;
+    background-position: 0 -469px;
+    vertical-align: middle;
+}
+.opt-edit{
+    width: 20px;
+    height: 22px;
+    background-position: -28px -469px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+.i-time{
+    width: 20px;
+    height: 24px;
+    background-position: 0 -491px;
+    vertical-align: top;
+    margin-right: 16px;
+}
+.add-more{
+    background-position: 0 -514px;
+    color:#feae2f;
+    padding-left: 24px;
+}
+.dialog{
+    position: fixed;
+    top:50%;
+    width: 570px;
+    left: 50%;
+    margin-left: -285px;
+    background: rgba(0, 0, 0, .52);
+    padding: 20px;
+}
+.dialog-tit{
+    height: 63px;
+    line-height: 63px;
+    color:#fff;
+    font-size: 24px;
+    background: #feae2f;
+    text-align: center;
+}
+.dialog-body{
+    background: #fff;
+    padding: 50px;
+}
+
+.more-box{
+    margin-top: 50px;
+    width: 656px;
+}

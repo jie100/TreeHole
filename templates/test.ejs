@@ -1,0 +1,9 @@
+<@- include('include/_header.ejs', {data:{title:"测试"}}); @>
+<!-- jquery-ui日期控件时,需引入该样式 -->
+<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css"/>
+<body>
+    <p>选择日期: <input type="text" id="date" readonly/></p>
+    <p>发送验证码: <button id="timeDown">发送验证码</button></p>
+    <p>ajax: <span id="ajax"></span></p>
+</body>
+<@- include('include/_footer.ejs',{data:{main:"js/test"}}); @>

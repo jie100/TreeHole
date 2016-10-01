@@ -1,0 +1,361 @@
+<div class="info">
+    <div class="info-tit">
+        <div class="spread"><span data-type="1">收起</span></div>
+        <h3>主借款人基础信息</h3>
+    </div>
+    <div class="info-con" >
+        <dl class="clear">
+            <dt class="one-txt">姓名</dt>
+            <dd><input id="custName" type="text" class="ipt w-normal" placeholder="请输入" value="<%=custName%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>性别</dt>
+            <dd>
+                <div class="radio">
+                    <ul id="custGender" class="clear">
+                        <li class="<%=custGender=='1'?'checked':''%>" data-code="1">男</li>
+                        <li class="<%=custGender=='2'?'checked':''%>" data-code="2">女</li>
+                    </ul>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>出生日期</dt>
+            <dd class="mul-line">
+                <div class="select w-normal">
+                    <div class="gray"><span class="icon i-time"></span><input id="custBorn" type="text" readonly placeholder="yyyy-MM-dd" value="<%=custBorn%>"/>
+                        <div class="select-option">
+                        </div>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>国家和地区</dt>
+            <dd class="mul-line">
+                <div class="select w-normal">
+                    <div id="'" class="selectedCont"><span data-code="<%=custNationality%>" class="<%=custNationality?'':'gray'%>"><%=custNationalityName?custNationalityName:'请选择'%></span><a href="javascript:;" class="areat icon"></a></div>
+                    <div class="select-option">
+                        <ul id="custNationalityUl"></ul>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">证件类型</dt>
+            <dd class="mul-line">
+                <div class="select w-normal">
+                    <div id="custCardType" class="selectedCont"><span data-code="<%=custCardType%>" class="<%=custCardType?'':'gray'%>"><%=custCardTypeName?custCardTypeName:'请选择'%></span><a href="javascript:;" class="areat icon"></a></div>
+                    <div class="select-option">
+                        <ul id="custCardTypeUl"></ul>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>证件到期日</dt>
+            <dd class="mul-line">
+                <div class="select w-normal">
+                    <div class="gray"><span class="icon i-time"></span><input id="papersDeadline" type="text" class="deadline" readonly placeholder="yyyy-MM-dd" value="<%=papersDeadline%>"/>
+                        <div class="select-option"></div>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">证件号码</dt>
+            <dd><input id="custCardId" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custCardId%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>港澳居民身份证号</dt>
+            <dd><input id="hkIdCard" type="text" class="ipt w-lg" placeholder="请输入" value="<%=hkIdCard%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>居留权证</dt>
+            <dd><input id="residenceWarrant" type="text" class="ipt w-lg" placeholder="请输入" value="<%=residenceWarrant%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>手机号码</dt>
+            <dd><input id="custPhone" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custPhone%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>婚姻状况</dt>
+            <dd>
+                <div id="isMarry" class="radio">
+                    <ul class="clear">
+                        <li class="<%=isMarry=='2'?'checked':''%>" data-code="2">已婚</li>
+                        <li class="<%=isMarry=='4'?'checked':''%>" data-code="4">丧偶</li>
+                        <li class="<%=isMarry=='3'?'checked':''%>" data-code="3">离异</li>
+                        <li class="<%=isMarry=='1'?'checked':''%>" data-code="1">未婚</li>
+                    </ul>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>有无当地社保</dt>
+            <dd class="mul-dd">
+                <div class="radio">
+                    <ul id="isLocalSecurity" class="clear">
+                        <li class="<%=isLocalSecurity=='1'?'checked':''%>" data-code="1">有</li>
+                        <li class="<%=isLocalSecurity=='2'?'checked':''%>" data-code="2">无</li>
+                    </ul>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>有无未成年子女</dt>
+            <dd class="mul-dd">
+                <div class="radio">
+                    <ul id="isChild" class="clear">
+                        <li class="<%=isChild=='1'?'checked':''%>" data-code="1">有</li>
+                        <li class="<%=isChild=='2'?'checked':''%>" data-code="2">无</li>
+                    </ul>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>户籍所在地</dt>
+            <dd>
+                <div class="select-group">
+                    <div class="select w-short">
+                        <div id="custRegisterProvince" class="selectedCont"><span data-code="<%=rProCode%>" class="<%=rProName?'':'gray'%>"><%=rProName?rProName:'省'%></span><a href="javascript:;" class="areat icon"></a></div>
+                        <div class="select-option">
+                        </div>
+                    </div>
+                    <div class="select w-short">
+                        <div id="custRegisterCity" class="selectedCont"><span data-code="<%=rCityCode%>" class="<%=rCityName?'':'gray'%>"><%=rCityName?rCityName:'市'%></span><a href="javascript:;" class="areat icon"></a></div>
+                        <div class="select-option">
+                        </div>
+                    </div>
+                    <div class="select w-short">
+                        <div id="custRegisterCounty" class="selectedCont"><span data-code="<%=rCountyCode%>" class="<%=rCountyName?'':'gray'%>"><%=rCountyName?rCountyName:'区'%></span><a href="javascript:;" class="areat icon"></a></div>
+                        <div class="select-option">
+                        </div>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">详细地址</dt>
+            <dd><input id="addressInDetail" type="text" class="ipt w-lg" placeholder="请输入" value="<%=addressInDetail%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>本地居住年限</dt>
+            <dd><input id="custLocalYears" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custLocalYears%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>家庭拥有住房套数</dt>
+            <dd><input id="custLocalHouses" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custLocalHouses%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>家庭是否有结清住房贷款记录</dt>
+            <dd class="mul-dd2">
+                <div class="radio">
+                    <ul id="houseLoanRecord" class="clear">
+                        <li class="<%=houseLoanRecord=='1'?'checked':''%>" data-code="1">是</li>
+                        <li class="<%=houseLoanRecord=='2'?'checked':''%>" data-code="2">否</li>
+                    </ul>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>家庭未结清住房贷款笔数</dt>
+            <dd><input id="unfinishedHouseLoan" type="text" class="ipt w-lg" placeholder="请输入" value="<%=unfinishedHouseLoan%>"/></dd>
+        </dl>
+    </div>
+</div>
+<div class="info">
+    <div class="info-tit">
+        <div class="spread"><span data-type="1">收起</span></div>
+        <h3>主借款人职业信息</h3>
+    </div>
+    <div class="info-con">
+        <dl class="clear">
+            <dt>雇佣类型</dt>
+            <dd>
+                <div class="radio">
+                    <ul id="custHireType" class="clear">
+                        <li class="<%=custHireType=='1'?'checked':''%>" data-code="1">自雇</li>
+                        <li class="<%=custHireType=='2'?'checked':''%>" data-code="2">受薪</li>
+                    </ul>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">单位名称</dt>
+            <dd><input id="custOrg" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custOrg%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">单位地址</dt>
+            <dd>
+                <div class="select-group">
+                    <div class="select w-short">
+                        <div id="custOrgProvince" class="selectedCont"><span data-code="<%=oProCode%>" class="<%=oProName?'':'gray'%>"><%=oProName?oProName:'省'%></span><a href="javascript:;" class="areat icon"></a></div>
+                        <div class="select-option">
+                        </div>
+                    </div>
+                    <div class="select w-short">
+                        <div id="custOrgCity" class="selectedCont"><span data-code="<%=oCityCode%>" class="<%=oCityName?'':'gray'%>"><%=oCityName?oCityName:'市'%></span><a href="javascript:;" class="areat icon"></a></div>
+                        <div class="select-option">
+                        </div>
+                    </div>
+                    <div class="select w-short">
+                        <div id="custOrgCounty" class="selectedCont"><span data-code="<%=oCountyCode%>" class="<%=oCountyName?'':'gray'%>"><%=oCountyName?oCountyName:'区'%></span><a href="javascript:;" class="areat icon"></a></div>
+                        <div class="select-option">
+                        </div>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>单位地址详细地址</dt>
+            <dd class="mul-line"><input id="custOrgAddress" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custOrgAddress%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>工作单位电话</dt>
+            <dd class="mul-line"><input id="custOrgPhone" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custOrgPhone%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>工作单位所属行业</dt>
+            <dd class="mul-line">
+                <div class="select w-normal">
+                    <div id="custOrgGuild" class="selectedCont"><span data-code="<%=custOrgGuild%>"  class="<%=custOrgGuild?'':'gray'%>"><%=custOrgGuildName?custOrgGuildName:'请选择'%></span><a href="javascript:;" class="areat icon"></a></div>
+                    <div class="select-option">
+                        <ul id="custOrgGuildUl"></ul>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">职业名称</dt>
+            <dd>
+                <div class="select w-normal">
+                    <div id="custJob" class="selectedCont"><span data-code="<%=custJob%>" class="<%=custJob?'':'gray'%>"><%=custJobName?custJobName:'请选择'%></span><a href="javascript:;" class="areat icon"></a></div>
+                    <div class="select-option">
+                        <ul id="custJobUl"></ul>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+    </div>
+</div>
+<div class="info">
+    <div class="info-tit">
+        <div class="spread"><span data-type="1">收起</span></div>
+        <h3>主借款人收入信息</h3>
+    </div>
+    <div class="info-con">
+        <dl class="clear">
+            <dt>工资性收入(税后)每月</dt>
+            <dd><input id="custEarning" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custEarning%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>股票分红收入(税后)每月</dt>
+            <dd><input id="custStoctEarning" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custStoctEarning%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>房租收入(税后)每月</dt>
+            <dd><input id="custRentEarning" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custRentEarning%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>其他收入(税后)每月</dt>
+            <dd><input id="custOtherEarning" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custOtherEarning%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>家庭月生活支出(含配偶)</dt>
+            <dd><input id="custFamilyExpend" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custFamilyExpend%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>家庭月负债支出(含配偶)</dt>
+            <dd><input id="custBeDebtExpend" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custBeDebtExpend%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>月物业管理费</dt>
+            <dd><input id="businessManagementFee" type="text" class="ipt w-lg" placeholder="请输入" value="<%=businessManagementFee%>"/></dd>
+        </dl>
+    </div>
+</div>
+<div style="display: <%=custSpouseInfo?'block':'none'%>" id="spouseInfo" class="info spread-info">
+    <div class="info-tit">
+        <div class="spread"><span data-type="2">展开</span></div>
+        <h3>主借款人配偶信息</h3>
+    </div>
+    <div class="info-con">
+        <dl class="clear">
+            <dt class="one-txt">姓名</dt>
+            <dd><input id="custSpouseName" type="text" class="ipt w-normal" placeholder="请输入" value="<%=custSpouseInfo?custSpouseInfo.custSpouseName:''%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>国家和地区</dt>
+            <dd>
+                <div class="select w-normal">
+                    <div id="custSpouseNationality" class="selectedCont"><span data-code="<%=custSpouseInfo?(custSpouseInfo.custSpouseNationality):''%>" class="<%=custSpouseInfo?(custSpouseInfo.custSpouseNationality?'':'gray'):'gray'%>"><%=custSpouseInfo?(custSpouseInfo.custSpouseNationalityName?custSpouseInfo.custSpouseNationalityName:'请选择'):'请选择'%></span><a href="javascript:;" class="areat icon"></a></div>
+                    <div class="select-option">
+                        <ul id="custSpouseNationalityUl"></ul>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">证件类型</dt>
+            <dd>
+                <div class="select w-normal">
+                    <div id="custSpouseCardType" class="selectedCont"><span data-code="<%custSpouseInfo?custSpouseInfo.custSpouseCardType:''%>" class="<%=custSpouseInfo?(custSpouseInfo.custSpouseCardType?'':'gray'):'gray'%>"><%=custSpouseInfo?(custSpouseInfo.custSpouseCardTypeName?custSpouseInfo.custSpouseCardTypeName:'请选择'):'请选择'%></span><a href="javascript:;" class="areat icon"></a></div>
+                    <div class="select-option">
+                        <ul id="custSpouseCardTypeUl"></ul>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>证件到期日</dt>
+            <dd class="mul-line">
+                <div class="select w-normal">
+                    <div class="gray"><span class="icon i-time"></span><input id="spousePapersDeadline" type="text" class="deadline" readonly placeholder="yyyy-MM-dd" value="<%=custSpouseInfo?custSpouseInfo.spousePapersDeadline:''%>"/>
+                        <div class="select-option"></div>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">证件号码</dt>
+            <dd><input id="custSpouseCardId" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custSpouseInfo?custSpouseInfo.custSpouseCardId:''%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>港澳居民身份证号</dt>
+            <dd><input id="spouseHkIdCard" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custSpouseInfo?(custSpouseInfo.hkIdCard?custSpouseInfo.hkIdCard:''):''%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">居留权证</dt>
+            <dd><input id="spouseResidenceWarrant" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custSpouseInfo?custSpouseInfo.residenceWarrant:''%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>手机号码</dt>
+            <dd><input id="custSpousePhone" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custSpouseInfo?custSpouseInfo.custSpousePhone:''%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">单位名称</dt>
+            <dd><input id="custSpouseOrg" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custSpouseInfo?custSpouseInfo.custSpouseOrg:''%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>工资性收入(税后)每月</dt>
+            <dd class="mul-line"><input id="custSpouseEarning" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custSpouseInfo?custSpouseInfo.custSpouseEarning:''%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>股票分红收入(税后)每月</dt>
+            <dd class="mul-line"><input id="custSpouseStoctEarning" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custSpouseInfo?custSpouseInfo.custSpouseStoctEarning:''%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>房租收入(税后)每月</dt>
+            <dd class="mul-line"><input id="custSpouseRentEarning" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custSpouseInfo?custSpouseInfo.custSpouseRentEarning:''%>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>其他收入(税后)每月</dt>
+            <dd class="mul-line"><input id="custSpouseOtherEarning" type="text" class="ipt w-lg" placeholder="请输入" value="<%=custSpouseInfo?custSpouseInfo.custSpouseOtherEarning:''%>"/></dd>
+        </dl>
+    </div>
+</div>
+<div class="btn-box">
+    <a id="saveBtn" class="btn" data-type="0" href="javascript:;">保存</a>
+    <a id="submitBtn" class="btn btn-other" data-type="1" href="javascript:;">提交订单</a>
+</div>

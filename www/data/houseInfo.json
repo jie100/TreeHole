@@ -1,0 +1,11 @@
+{
+  "flag":"1",
+  "data":{
+    "sOrderId":"123456",
+    "custName":"李四",
+    "sRelatingCod":"23456",
+    "sOrderStatusName":"3456",
+    "sOrderStatus":"ok"
+  },
+  "msg":"no msg"
+}

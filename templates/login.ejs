@@ -1,0 +1,35 @@
+<@- include('include/_header.ejs', {data:{title:"房按揭登陆页面"}}); @>
+<style>
+	.code{cursor: pointer;}
+	.dis{pointer-events: none;}
+</style>
+<body>
+<div class="login">
+	<div class="login-bg">
+		<div class="w clear">
+			<div class="logo"><a href=""></a></div>
+			<div class="login-btm">
+				<div class="login-con">
+					<h2>用户登录</h2>
+					<div class="form">
+						<div class="label clear infoBox">
+							<label class="lable-icon label-user"></label>
+							<div class="ipt-box"><input id="tel" type="text" placeholder="请输入手机号" maxlength="11" name="mobileNo"/></div>
+						</div>
+						<div class="label clear infoBox">
+							<label class="lable-icon label-code"></label>
+							<div class="ipt-box ipt-code"><input id="code" type="text" placeholder="输入验证码" name="mobileCode"/></div>
+							<div class="code" id="sendCode">获取验证码</div>
+						</div>
+						<a class="btn" id="login" href="javascript:;">立即登录</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	版权所有©中国平安保险（集团）股份有限公司     ICP许可证号 粤ICP备06118290号
+</div>
+</body>
+<@- include('include/_footer.ejs',{data:{main:"js/login"}}); @>

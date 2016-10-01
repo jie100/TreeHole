@@ -1,0 +1,58 @@
+diff a/www/js/common/api.js b/www/js/common/api.js	(rejected hunks)
+@@ -6,12 +6,13 @@
+ define([
+     "js/common/env",
+     "js/common/constant",
+-    ],function(Env,Constant){
++], function (Env, Constant) {
+     var prefix = "",
+-    	envUrl = './data';
++        // 访问JSON
++        envUrl = Env == 'PRODUCTION' ? 'http://txt.pingan.com.cn/static/paem/papc/data/' : 'http://test1-puhui-web.pingan.com.cn:10180/manager/stg/papc/online/mortage/data/';
+     switch (Env) {
+         case 'DEVELOPMENT' :
+-            prefix = './data';
++            prefix = envUrl = './data/';
+             break;
+         case 'STG1':
+             prefix = 'http://test-papc-gs.pingan.com.cn:8080/stg1/';
+@@ -30,12 +31,13 @@
+         default:
+             prefix = 'https://papc-gs.pingan.com.cn/';
+     }
+-            
++
+     var api = Env == "DEVELOPMENT" ? {
+         //本地开发环境模拟JSON
+-        PLUGIN_LOGIN: prefix + '/V2/login/umLogin.do'
+-    }:{
+-        PLUGIN_LOGIN: prefix + '/V2/login/umLogin.do'
++        PLUGIN_LOGIN: 'V2/login/umLogin.do',
++        TEST: 'test.json'
++    } : {
++        PLUGIN_LOGIN: 'V2/login/umLogin.do'
+     };
+ 
+     // 只需访问本地数据的接口
+@@ -43,7 +45,7 @@
+         // 获取MD5
+         MD5: envUrl + 'md5.json',
+         //中介公司搜索
+-        SEARCH_COMPANY:envUrl + 'searchCompany.json',
++        SEARCH_COMPANY: envUrl + 'searchCompany.json',
+         // 获取全国城市接口
+         ADDRESS_CHINA: envUrl + 'address-china.json',
+         // 获取全国城市接口
+@@ -51,10 +53,7 @@
+     };
+     $.extend(api, cApi);
+ 
+-    var getUrl = function (name) {
+-        if (cApi[name]) {
+-            return api[name];
+-        }
+-        return Env == 'DEVELOPMENT' ? (api[name]) : (prefix + api[name]);
++    return function (name) {
++        return cApi[name] ? api[name] : prefix + api[name];
+     };
+ });

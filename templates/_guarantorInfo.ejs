@@ -1,0 +1,257 @@
+<% _.each(data,function(item, index){ %>
+<div class="info guarantor">
+    <div class="info-tit">
+        <div class="spread"><a href="javascript:;" style="margin-right: 20px;" class="link delGuarantor">删除</a><span data-type="1">收起</span></div>
+        <h3 class="msg">担保人信息<%= index + 1 %></h3>
+    </div>
+    <div class="info-con">
+        <dl class="clear">
+            <dt class="one-txt">姓名</dt>
+            <dd><input type="text" class="ipt w-normal custPartnerName" placeholder="请直接输入"
+                       value="<%= item.custPartnerName %>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>婚姻状况</dt>
+            <dd>
+                <div class="radio isMarry">
+                    <ul class="clear">
+                        <li class="<%= item.isMarry == '2' ? 'checked' : '' %>" data-code="2">已婚</li>
+                        <li class="<%= item.isMarry == '4' ? 'checked' : '' %>" data-code="4">丧偶</li>
+                        <li class="<%= item.isMarry == '3' ? 'checked' : '' %>" data-code="3">离异</li>
+                        <li class="<%= item.isMarry == '1' ? 'checked' : '' %>" data-code="1">未婚</li>
+                    </ul>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>国家和地区</dt>
+            <dd class="mul-line">
+                <div class="select w-normal">
+                    <div class="selectedCont custPartnerNationality"><span
+                                data-code="<%= item.custPartnerNationality %>"
+                                class="<%= item.custPartnerNationalityName ? '' : 'gray' %>"><%= item.custPartnerNationalityName ? item.custPartnerNationalityName : '请选择' %></span><a
+                                href="javascript:;" class="areat icon"></a></div>
+                    <div class="select-option">
+                        <ul class="custPartnerNationalityUl"></ul>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">证件类型</dt>
+            <dd>
+                <div class="select w-normal">
+                    <div class="selectedCont custPartnerCardType"><span data-code="<%= item.custPartnerCardType %>"
+                                                                        class="<%= item.custPartnerCardTypeName ? '' : 'gray' %>"><%= item.custPartnerCardTypeName ? item.custPartnerCardTypeName : '请选择' %></span><a
+                                href="javascript:;" class="areat icon"></a></div>
+                    <div class="select-option">
+                        <ul class="custPartnerCardTypeUl"></ul>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">证件号码</dt>
+            <dd><input type="text" class="ipt w-lg custPartnerCardId" placeholder="请直接输入"
+                       value="<%= item.custPartnerCardId %>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>港澳居民身份证号</dt>
+            <dd class="mul-line"><input type="text" class="ipt w-lg hkIdCard" placeholder="请直接输入"
+                                        value="<%= item.hkIdCard %>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">居留权证</dt>
+            <dd><input type="text" class="ipt w-lg residenceWarrant" placeholder="请直接输入"
+                       value="<%= item.residenceWarrant %>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>证件到期日</dt>
+            <dd class="mul-line">
+                <div class="select w-normal">
+                    <div class="gray"><span class="icon i-time"></span><input type="text"
+                                                                              class="deadline papersDeadline" readonly
+                                                                              placeholder="yyyy-MM-dd"
+                                                                              value="<%= item.papersDeadline %>"/>
+
+                        <div class="select-option"></div>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl class="clear">
+            <dt>手机号码</dt>
+            <dd><input type="text" class="ipt w-lg custGuarantorPhone" placeholder="请直接输入"
+                       value="<%= item.custGuarantorPhone %>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt class="one-txt">单位名称</dt>
+            <dd><input type="text" class="ipt w-lg custPartnerOrg" placeholder="请直接输入"
+                       value="<%= item.custPartnerOrg %>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>工资性收入(税后)每月</dt>
+            <dd class="mul-line"><input type="text" class="ipt w-lg custPartnerEarning" placeholder="请直接输入"
+                                        value="<%= item.custPartnerEarning %>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>股票分红收入(税后)每月</dt>
+            <dd class="mul-line"><input type="text" class="ipt w-lg custPartnerStoctEarning" placeholder="请直接输入"
+                                        value="<%= item.custPartnerStoctEarning %>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>房租收入(税后)每月</dt>
+            <dd class="mul-line"><input type="text" class="ipt w-lg custPartnerRentEarning" placeholder="请直接输入"
+                                        value="<%= item.custPartnerRentEarning %>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>其他收入(税后)每月</dt>
+            <dd class="mul-line"><input type="text" class="ipt w-lg custPartnerOtherEarning" placeholder="请直接输入"
+                                        value="<%= item.custPartnerOtherEarning %>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>家庭月生活支出(含配偶)</dt>
+            <dd class="mul-line"><input type="text" class="ipt w-lg custPartnerFamilyExpend" placeholder="请直接输入"
+                                        value="<%= item.custPartnerFamilyExpend %>"/></dd>
+        </dl>
+        <dl class="clear">
+            <dt>家庭月负债支出(含配偶)</dt>
+            <dd class="mul-line"><input type="text" class="ipt w-lg custPartnerBeDebtExpend" placeholder="请直接输入"
+                                        value="<%= item.custPartnerBeDebtExpend %>"/></dd>
+        </dl>
+    </div>
+</div>
+<% }) %>
+<div class="info">
+    <div class="clear">
+        <div id="addGuarantor" style="cursor: pointer" class="icon add-more">添加更多的担保人</div>
+    </div>
+</div>
+<div class="btn-box">
+    <a id="saveBtn" class="btn" data-type="0" href="javascript:;">保存</a>
+    <a id="submitBtn" class="btn btn-other" data-type="1" href="javascript:;">提交订单</a>
+</div>
+<script type="text/template" id="temp">
+    <div class="info guarantor">
+        <div class="info-tit">
+            <div class="spread"><a href="javascript:;" style="margin-right: 20px;" class="link delGuarantor">删除</a><span data-type="1">收起</span></div>
+            <h3 class="msg">担保人信息</h3>
+        </div>
+        <div class="info-con">
+            <dl class="clear">
+                <dt class="one-txt">姓名</dt>
+                <dd><input type="text" class="ipt w-normal custPartnerName" placeholder="请直接输入"
+                           value=""/></dd>
+            </dl>
+            <dl class="clear">
+                <dt>婚姻状况</dt>
+                <dd>
+                    <div class="radio isMarry">
+                        <ul class="clear">
+                            <li class="" data-code="2">已婚</li>
+                            <li class="" data-code="4">丧偶</li>
+                            <li class="" data-code="3">离异</li>
+                            <li class="" data-code="1">未婚</li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="clear">
+                <dt>国家和地区</dt>
+                <dd class="mul-line">
+                    <div class="select w-normal">
+                        <div class="selectedCont custPartnerNationality"><span
+                                    data-code=""
+                                    class="gray">请选择</span><a
+                                    href="javascript:;" class="areat icon"></a></div>
+                        <div class="select-option">
+                            <ul class="custPartnerNationalityUl"></ul>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="clear">
+                <dt class="one-txt">证件类型</dt>
+                <dd>
+                    <div class="select w-normal">
+                        <div class="selectedCont custPartnerCardType"><span data-code=""
+                                                                            class="gray">请选择</span><a
+                                    href="javascript:;" class="areat icon"></a></div>
+                        <div class="select-option">
+                            <ul class="custPartnerCardTypeUl"></ul>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="clear">
+                <dt class="one-txt">证件号码</dt>
+                <dd><input type="text" class="ipt w-lg custPartnerCardId" placeholder="请直接输入"
+                           value=""/></dd>
+            </dl>
+            <dl class="clear">
+                <dt>港澳居民身份证号</dt>
+                <dd class="mul-line"><input type="text" class="ipt w-lg hkIdCard" placeholder="请直接输入"
+                                            value=""/></dd>
+            </dl>
+            <dl class="clear">
+                <dt class="one-txt">居留权证</dt>
+                <dd><input type="text" class="ipt w-lg residenceWarrant" placeholder="请直接输入"
+                           value=""/></dd>
+            </dl>
+            <dl class="clear">
+                <dt>证件到期日</dt>
+                <dd class="mul-line">
+                    <div class="select w-normal">
+                        <div class="gray"><span class="icon i-time"></span><input type="text"
+                                                                                  class="deadline papersDeadline" readonly
+                                                                                  placeholder="yyyy-MM-dd"
+                                                                                  value=""/>
+
+                            <div class="select-option"></div>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="clear">
+                <dt>手机号码</dt>
+                <dd><input type="text" class="ipt w-lg custGuarantorPhone" placeholder="请直接输入"
+                           value=""/></dd>
+            </dl>
+            <dl class="clear">
+                <dt class="one-txt">单位名称</dt>
+                <dd><input type="text" class="ipt w-lg custPartnerOrg" placeholder="请直接输入"
+                           value=""/></dd>
+            </dl>
+            <dl class="clear">
+                <dt>工资性收入(税后)每月</dt>
+                <dd class="mul-line"><input type="text" class="ipt w-lg custPartnerEarning" placeholder="请直接输入"
+                                            value=""/></dd>
+            </dl>
+            <dl class="clear">
+                <dt>股票分红收入(税后)每月</dt>
+                <dd class="mul-line"><input type="text" class="ipt w-lg custPartnerStoctEarning" placeholder="请直接输入"
+                                            value=""/></dd>
+            </dl>
+            <dl class="clear">
+                <dt>房租收入(税后)每月</dt>
+                <dd class="mul-line"><input type="text" class="ipt w-lg custPartnerRentEarning" placeholder="请直接输入"
+                                            value=""/></dd>
+            </dl>
+            <dl class="clear">
+                <dt>其他收入(税后)每月</dt>
+                <dd class="mul-line"><input type="text" class="ipt w-lg custPartnerOtherEarning" placeholder="请直接输入"
+                                            value=""/></dd>
+            </dl>
+            <dl class="clear">
+                <dt>家庭月生活支出(含配偶)</dt>
+                <dd class="mul-line"><input type="text" class="ipt w-lg custPartnerFamilyExpend" placeholder="请直接输入"
+                                            value=""/></dd>
+            </dl>
+            <dl class="clear">
+                <dt>家庭月负债支出(含配偶)</dt>
+                <dd class="mul-line"><input type="text" class="ipt w-lg custPartnerBeDebtExpend" placeholder="请直接输入"
+                                            value=""/></dd>
+            </dl>
+        </div>
+    </div>
+</script>

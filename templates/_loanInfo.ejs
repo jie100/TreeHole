@@ -1,0 +1,167 @@
+<div class="tab-con ">
+    <div class="info last-info">
+        <div class="info-con">
+            <dl class="clear">
+                <dt class="one-txt">是否是组合地贷款</dt>
+                <dd class="mul-dd">
+                    <div class="radio" id="choose">
+                        <ul class="clear">
+                            <li class="<%= isGroup == '1' ? 'checked' : '' %>" data-code="1">是</li>
+                            <li class="<%= isGroup == '2' ? 'checked' : '' %>" data-code="2">否</li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="clear">
+                <dt>申请金额-商贷</dt>
+                <dd class="mul-line"><input type="text" class="ipt w-lg businessLoanFigure"
+                                            value="<%= businessLoanFigure %>" placeholder="金额不得低于10万"
+                                            maxlength="10"/></dd>
+            </dl>
+            <dl class="clear infoBox">
+                <dt>申请期限-商贷</dt>
+                <dd class="mul-line"><input type="text" class="ipt w-lg businessLoanDeadline"
+                                            value="<%= businessLoanDeadline %>" placeholder="最多为360个月"
+                                            name="figureDate"/>
+
+                    <p class="tip" style="color:red;display: none">* 商贷期限不能超过360个月</p>
+                </dd>
+            </dl>
+            <dl class="clear">
+                <dt>还款方式-商贷</dt>
+                <dd class="mul-line">
+                    <div class="select w-normal">
+                                        <span class="<%= repaymentCommercial ? '' : 'gray' %> repaymentCommercial"
+                                              data-code="<%= repaymentCommercial %>"><%= repaymentCommercial ? repaymentCommercialName : '请选择' %></span><a
+                                href="" class="areat icon"></a>
+
+                        <div class="select-option">
+                            <ul>
+                                <li data-code="1">等额还款</li>
+                                <li data-code="2">等本还款</li>
+                                <li data-code="7">等额双周供</li>
+                                <li data-code="8">等本双周供</li>
+                            </ul>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <section id="fund">
+                <dl class="clear" id="houseFundingFigure">
+                    <dt>申请金额-公积金</dt>
+                    <dd class="mul-line"><input type="text" class="ipt w-lg houseFundingFigure"
+                                                value="<%= houseFundingFigure %>" placeholder="金额不得低于0万"
+                                                maxlength="10"/></dd>
+                </dl>
+                <dl class="clear" id="houseFundingDeadline">
+                    <dt>贷款期限-公积金</dt>
+                    <dd class="mul-line">
+                        <div class="select w-normal">
+                                        <span class="<%= houseFundingDeadline ? '' : 'gray' %> houseFundingDeadline"
+                                              data-code="<%= houseFundingDeadline %>"><%= houseFundingDeadline ? houseFundingDeadline * 12 + '个月' : '请选择' %></span><a
+                                    href="" class="areat icon"></a>
+
+                            <div class="select-option">
+                                <ul>
+                                    <li data-code="1">12个月</li>
+                                    <li data-code="2">24个月</li>
+                                    <li data-code="3">36个月</li>
+                                    <li data-code="4">48个月</li>
+                                    <li data-code="5">60个月</li>
+                                    <li data-code="6">72个月</li>
+                                    <li data-code="7">84个月</li>
+                                    <li data-code="8">96个月</li>
+                                    <li data-code="9">108个月</li>
+                                    <li data-code="10">120个月</li>
+                                    <li data-code="11">132个月</li>
+                                    <li data-code="12">144个月</li>
+                                    <li data-code="13">156个月</li>
+                                    <li data-code="14">168个月</li>
+                                    <li data-code="15">180个月</li>
+                                    <li data-code="16">192个月</li>
+                                    <li data-code="17">204个月</li>
+                                    <li data-code="18">216个月</li>
+                                    <li data-code="19">228个月</li>
+                                    <li data-code="20">240个月</li>
+                                    <li data-code="21">252个月</li>
+                                    <li data-code="22">264个月</li>
+                                    <li data-code="23">276个月</li>
+                                    <li data-code="24">288个月</li>
+                                    <li data-code="25">200个月</li>
+                                    <li data-code="26">312个月</li>
+                                    <li data-code="27">324个月</li>
+                                    <li data-code="28">336个月</li>
+                                    <li data-code="29">348个月</li>
+                                    <li data-code="30">360个月</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="clear" id="custHouseFundingId">
+                    <dt>主借款人公积金账号</dt>
+                    <dd class="mul-line">
+                        <input type="text" class="ipt w-lg custHouseFundingId"
+                               value="<%= custHouseFundingId %>" placeholder="请输入" maxlength="20"/>
+                    </dd>
+                </dl>
+                <dl class="clear" id="spouseCard">
+                    <dt>主借款人配偶公积金账号</dt>
+                    <dd class="mul-line"><input type="text" class="ipt w-lg spouseCard"
+                                                value="<%= spouseHouseFundingId %>" placeholder="请输入"
+                                                maxlength="20"/></dd>
+                </dl>
+                <dl class="clear" id="repaymentFund">
+                    <dt>还款方式-公积金</dt>
+                    <dd class="mul-line">
+                        <div class="select w-normal">
+                                        <span class="<%= repaymentFund ? '' : 'gray' %> repaymentFund"
+                                              data-code="<%= repaymentFund %>"><%= repaymentFund ? repaymentFundName : '请选择' %></span><a
+                                    href="" class="areat icon"></a>
+
+                            <div class="select-option">
+                                <ul>
+                                    <li data-code="1">等额还款</li>
+                                    <li data-code="2">等本还款</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </section>
+        </div>
+    </div>
+    <div class="btn-box">
+        <a class="btn save" href="javascript:;">保存</a>
+        <a class="btn btn-other sub" href="javascript:;">提交订单</a>
+    </div>
+</div>
+<!-- <div id="complateOrder"></div>
+    <script type="text/template" id="complateOrderTem">
+        <div class="dialog" style="margin-top: -203px;" id="complateOrder">
+            <div class="icon close"></div>
+            <div class="dialog-tit">完成订单</div>
+            <div class="dialog-body">
+                <div class="order-finish">
+                    <div class="icon i-cuss" id="goOrderList"></div>
+                    <p class="p">恭喜您！订单创建完成！</p>
+
+                    <p class="p">您的订单关联码：<span class="color"><%= salesRelatingCode %></span></p>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="complateSaveTem">
+        <div class="dialog" style="margin-top: -203px;" id="complateSave">
+            <div class="icon close"></div>
+            <div class="dialog-tit">保存订单</div>
+            <div class="dialog-body">
+                <div class="order-finish">
+                    <div class="icon i-cuss" id="goOrderList"></div>
+                    <p class="p">恭喜您！订单保存完成！</p>
+
+                    <p class="p">您的订单号为：<span class="color"><%= salesOrderId %></span></p>
+                </div>
+            </div>
+        </div>
+    </script>-->

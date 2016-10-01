@@ -1,0 +1,15 @@
+{
+  "data":{
+    "isGroup":"1",
+    "businessLoanFigure":"111",
+    "houseFundingFigure":"222",
+    "businessLoanDeadline":"33",
+    "houseFundingDeadline":"4",
+    "custHouseFundingId":"444",
+    "repaymentCommercial":"7",
+    "repaymentFund":"1",
+    "spouseHouseFundingId":"555555"
+  },
+  "flag":"1",
+  "msg":"请求成功"
+}

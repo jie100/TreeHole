@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css"/>
+				<div class="info last-info">
+                    <div class="info-con">
+                        <dl class="clear">
+                            <dt class="one-txt">物业地址</dt>
+                            <dd>
+                            	<div class="select-group">
+				                    <div class="select w-short">
+				                        <div id="custRegisterProvince" class="selectedCont"><span class="gray">省</span><a href="javascript:;" class="areat icon"></a></div>
+				                        <div class="select-option"></div>
+				                    </div>
+				                    <div class="select w-short">
+				                        <div id="custRegisterCity" class="selectedCont"><span class="gray">市</span><a href="javascript:;" class="areat icon"></a></div>
+				                        <div class="select-option"></div>
+				                    </div>
+				                    <div class="select w-short">
+				                        <div id="custRegisterCounty" class="selectedCont"><span class="gray">区</span><a href="javascript:;" class="areat icon"></a></div>
+				                        <div class="select-option"></div>
+				                    </div>
+				                </div>
+                            </dd>
+                        </dl>
+                        <dl class="clear">
+                            <dt>楼层/总层高</dt>
+                            <dd class="mul-line clear"><input type="text" name="floor" class="ipt w-short fl" placeholder="X/Y(X<=Y)"/></dd>
+                        </dl>
+                        <dl class="clear">
+                            <dt class="one-txt">物业名称</dt>
+                            <dd><input type="text" class="ipt w-lg" name="propertyName" placeholder="请直接输入"/></dd>
+                        </dl>
+                        <dl class="clear">
+                            <dt>物业地址详细地址</dt>
+                            <dd class="mul-line"><input type="text" name="detailAddress" class="ipt w-lg" placeholder="请直接输入"/></dd>
+                        </dl>
+                        <dl class="clear">
+                            <dt class="one-txt">竣工日期</dt>
+                            <dd>
+                            	<input type="text" id="endDate" class="w-normal ipt" readonly placeholder="请选择日期"/>                          
+                            </dd>
+                        </dl>
+                        <dl class="clear houseAddressBox dn">
+                            <dt>房产所在位置</dt>
+                            <dd class="mul-line">
+                                <div class="select w-normal">
+                                    <div class="selectedCont"  id="houseAddress"><span>请选择</span><a class="areat icon"></a></div>
+                                    <div class="select-option">
+                                    	<ul id="houseAddressCont"></ul>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="clear">
+                            <dt class="one-txt">房产证号</dt>
+                            <dd><input type="text" class="ipt w-lg" name="houseCardNumber" placeholder="请直接输入"/></dd>
+                        </dl>
+                        <dl class="clear">
+                            <dt>建筑面积(㎡)</dt>
+                            <dd class="mul-line"><input type="text" name="coveredArea" class="ipt w-lg" placeholder=">= 25"/></dd>
+                        </dl>
+                        <dl class="clear">
+                            <dt class="one-txt">成交价</dt>
+                            <dd><input type="text" class="ipt w-lg" name="currentRate" placeholder="请直接输入"/></dd>
+                        </dl>
+                        <dl class="clear">
+                            <dt>新产证总人数</dt>
+                            <dd class="mul-line"><input type="text" name="totalPeople" class="ipt w-lg" placeholder=">= 1"/></dd>
+                        </dl>
+                        <dl class="clear">
+                            <dt>土地使用期限-起始日</dt>
+                            <dd class="mul-line">
+                                <input type="text" id="startDate" class="w-normal ipt" readonly placeholder="请选择日期"/>
+                            </dd>
+                        </dl>
+                        <dl class="clear">
+                            <dt>土地使用期限-到期日</dt>
+                            <dd class="mul-line">
+                                <input type="text" id="deadline" class="w-normal ipt" readonly placeholder="请选择日期"/>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a class="btn" id="saveBtn">保存</a>
+                    <a class="btn btn-other" id="submitBtn">提交订单</a>
+                </div>
+            
